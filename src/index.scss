@@ -22,11 +22,26 @@ table {
   border-color: var(--border-color) !important;
 }
 
+.table-responsive {
+  max-width: 100% !important;
+}
+
 .table-row {
   cursor: pointer;
+
   &.selected {
+    border-width: 2px !important;
+
     td {
-      background-color: greenyellow !important;
+      background-color: rgba(151, 231, 126, 0.634) !important;
     }
   }
+}
+
+.vstack {
+  width: 100%;
+}
+
+.container {
+  overflow-x: hidden;
 }
