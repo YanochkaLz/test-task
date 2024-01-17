@@ -21,7 +21,7 @@ const ProfilesTable: FC<IProfilesTableProps> = ({
 		<Stack>
 			<h2 id='profiles'>Profiles</h2>
 			<TableComponent headers={profileHeaders}>
-				{data?.map((row, index) => (
+				{data?.map(row => (
 					<tr
 						className={
 							row.profileId === selectedProfileId
@@ -31,7 +31,6 @@ const ProfilesTable: FC<IProfilesTableProps> = ({
 						onClick={() => handleSelectProfileId(row.profileId)}
 						key={row.profileId}
 					>
-						<td>{index + 1}</td>
 						<td>{row.profileId}</td>
 						<td>{row.country}</td>
 						<td>{row.marketplace}</td>

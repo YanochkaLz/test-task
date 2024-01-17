@@ -14,9 +14,8 @@ const CampaignsTable: FC<ICampaignsTableProps> = ({ data }) => {
 		<Stack>
 			<h2 id='campaigns'>Campaigns</h2>
 			<TableComponent headers={campaignHeaders}>
-				{data?.map((row, index) => (
+				{data?.map(row => (
 					<tr className='table-row' key={row.campaignId}>
-						<td>{index + 1}</td>
 						<td>{row.campaignId}</td>
 						<td>{row.clicks}</td>
 						<td>{row.cost}</td>

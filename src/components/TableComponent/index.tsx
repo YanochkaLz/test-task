@@ -14,7 +14,6 @@ const TableComponent: FC<ITableComponentProps> = ({
 		<Table bordered hover responsive size='sm'>
 			<thead>
 				<tr>
-					<th>№</th>
 					{headers?.map((header, index) => (
 						<th key={index}>{header}</th>
 					))}
