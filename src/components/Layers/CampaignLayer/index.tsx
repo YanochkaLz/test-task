@@ -27,7 +27,7 @@ const CampaignLayer: FC<ICampaignLayerProps> = ({ campaigns }) => {
 	}, [currentCampaigns]);
 
 	return (
-		<Stack>
+		<Stack className='layer-block'>
 			<h2 id='campaigns'>Campaigns</h2>
 
 			<div className='d-flex justify-content-end flex-wrap gap-4 mb-4'>

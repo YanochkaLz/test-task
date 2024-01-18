@@ -46,3 +46,9 @@ table {
 .container {
   overflow-x: hidden;
 }
+
+@media (max-width: 500px) {
+  .layer-block {
+    text-align: center;
+  }
+}

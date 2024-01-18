@@ -21,7 +21,7 @@ const AccountLayer: FC = () => {
 
 	return (
 		<>
-			<Stack>
+			<Stack className='layer-block'>
 				<h2>Accounts</h2>
 				<div className='d-flex justify-content-end flex-wrap gap-4 mb-4'>
 					<AccountSortingFiltering setAccounts={setAccounts} />

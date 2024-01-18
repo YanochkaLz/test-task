@@ -35,7 +35,7 @@ const ProfileLayer: FC<IProfileLayerProps> = ({ profiles }) => {
 
 	return (
 		<>
-			<Stack>
+			<Stack className='layer-block'>
 				<h2 id='profiles'>Profiles</h2>
 				<div className='d-flex justify-content-end flex-wrap gap-4 mb-4'>
 					<ProfileSortingFiltering
