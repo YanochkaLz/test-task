@@ -1,5 +1,5 @@
 import { Stack } from 'react-bootstrap';
-import AccountLayer from './components/AccountLayer';
+import AccountLayer from './components/Layers/AccountLayer';
 
 function App() {
 	return (

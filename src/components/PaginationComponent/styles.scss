@@ -1,8 +1,9 @@
 .pagination-block {
-  --bs-pagination-active-bg: var(--accent-color);
-  --bs-pagination-active-border-color: var(--dark-color);
-  --bs-pagination-hover-color: #000;
-  --bs-pagination-active-color: #000;
-  justify-content: center;
-  margin-top: .8rem;
+  --bs-pagination-color: grey !important;
+  --bs-pagination-active-bg: var(--accent-color) !important;
+  --bs-pagination-active-border-color: var(--dark-color) !important;
+  --bs-pagination-hover-color: #000 !important;
+  --bs-pagination-active-color: #000 !important;
+  justify-content: center !important;
+  margin-top: .8rem !important;
 }

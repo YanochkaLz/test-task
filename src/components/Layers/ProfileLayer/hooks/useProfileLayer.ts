@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import { IExtendedProfile } from '../../../models/IProfile';
-import { IExtendedCampaign } from '../../../models/ICampaign';
-import { campaignsData } from '../../../constants/data';
+import { IExtendedProfile } from '../../../../models/IProfile';
+import { IExtendedCampaign } from '../../../../models/ICampaign';
+import { campaignsData } from '../../../../constants/data';
 
 const useProfileLayer = (profiles: IExtendedProfile[]) => {
 	const [selectedProfileId, setSelectedProfileId] = useState<number | null>(
@@ -32,18 +32,20 @@ const useProfileLayer = (profiles: IExtendedProfile[]) => {
 	};
 
 	useEffect(() => {
-		if (selectedProfileId !== null) {
-			setCampaigns(filterCampaignsByProfileId(selectedProfileId));
-		}
-	}, [selectedProfileId]);
-
-	useEffect(() => {
 		if (profiles?.length > 0) {
-			setSelectedProfileId(profiles[0].profileId);
+			const initialProfileId = profiles[0].profileId;
+			setSelectedProfileId(initialProfileId);
+			setCampaigns(filterCampaignsByProfileId(initialProfileId));
 		} else {
 			setCampaigns([]);
 		}
 	}, [profiles]);
+
+	useEffect(() => {
+		if (selectedProfileId !== null) {
+			setCampaigns(filterCampaignsByProfileId(selectedProfileId));
+		}
+	}, [selectedProfileId]);
 
 	return { selectedProfileId, handleSelectProfileId, campaigns };
 };

@@ -6,17 +6,19 @@ import './styles.scss';
 interface ISelectComponentProps {
 	options: string[];
 	onChange: (value: string) => void;
+	value: string;
 }
 
-const SelectComponent: FC<ISelectComponentProps> = ({ options, onChange }) => {
+const SelectComponent: FC<ISelectComponentProps> = ({ options, onChange, value }) => {
 	return (
 		<Form.Select
 			onChange={e => onChange(e.target.value)}
 			className='select-component'
+			value={value}
 		>
-			<option>---</option>
+			<option value={'---'}>---</option>
 			{options?.map((option, index) => (
-				<option key={index}>{option}</option>
+				<option value={option} key={index}>{option}</option>
 			))}
 		</Form.Select>
 	);

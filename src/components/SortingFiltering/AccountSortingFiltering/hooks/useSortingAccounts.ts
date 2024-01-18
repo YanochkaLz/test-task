@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import { IAccount } from '../../../models/IAccount';
-import { accountsData } from '../../../constants/data';
 import { sortingOptions } from '..';
+import { accountsData } from '../../../../constants/data';
+import { IAccount } from '../../../../models/IAccount';
 
 export const useSortingAccounts = () => {
 	const [initialOrder, setInitialOrder] = useState<string>('---');

@@ -1,8 +1,8 @@
 import { FC, useEffect } from 'react';
-import SelectComponent from '../SelectComponent';
-import { IAccount } from '../../models/IAccount';
 import { useSortingAccounts } from './hooks/useSortingAccounts';
 import { useFilteringAccounts } from './hooks/useFilteringAccounts';
+import { IAccount } from '../../../models/IAccount';
+import SelectComponent from '../../SelectComponent';
 
 export const sortingOptions = [
 	'creation date decreasing',

@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { IAccount } from '../../models/IAccount';
+import { IAccount } from '../../../models/IAccount';
 import TableComponent from '../TableComponent';
 
 interface IAccountsTableProps {

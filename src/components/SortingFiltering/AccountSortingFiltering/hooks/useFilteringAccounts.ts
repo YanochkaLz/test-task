@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import { IAccount } from '../../../models/IAccount';
-import { accountsData } from '../../../constants/data';
 import { filteringOptions } from '..';
+import { accountsData } from '../../../../constants/data';
+import { IAccount } from '../../../../models/IAccount';
 
 export const useFilteringAccounts = () => {
 	const [filterCriteria, setFilterCriteria] = useState<string>('---');

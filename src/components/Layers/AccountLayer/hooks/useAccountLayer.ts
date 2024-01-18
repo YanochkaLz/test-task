@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import { IExtendedProfile } from '../../../models/IProfile';
-import { profilesData } from '../../../constants/data';
-import { IAccount } from '../../../models/IAccount';
+import { IAccount } from '../../../../models/IAccount';
+import { IExtendedProfile } from '../../../../models/IProfile';
+import { profilesData } from '../../../../constants/data';
 
 const useAccountLayer = (accounts: IAccount[]) => {
 	const [profiles, setProfiles] = useState<IExtendedProfile[]>([
@@ -39,7 +39,7 @@ const useAccountLayer = (accounts: IAccount[]) => {
 		} else {
 			setProfiles([]);
 		}
-	}, [accounts])
+	}, [accounts]);
 
 	return { profiles, selectedAccountId, handleSelectAccountId };
 };
