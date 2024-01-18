@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC} from 'react';
 import { IAccount } from '../../../models/IAccount';
 import TableComponent from '../TableComponent';
 

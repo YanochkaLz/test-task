@@ -15,8 +15,10 @@ interface IAccountSortingProps {
 }
 
 const AccountSortingFiltering: FC<IAccountSortingProps> = ({ setAccounts }) => {
-	const { sortedAccounts, setInitialOrder } = useSortingAccounts();
-	const { filteredAccounts, setFilterCriteria } = useFilteringAccounts();
+	const { sortedAccounts, setInitialOrder, initialOrder } =
+		useSortingAccounts();
+	const { filteredAccounts, setFilterCriteria, filterCriteria } =
+		useFilteringAccounts();
 
 	useEffect(() => {
 		if (filteredAccounts && sortedAccounts) {
@@ -30,11 +32,16 @@ const AccountSortingFiltering: FC<IAccountSortingProps> = ({ setAccounts }) => {
 		<>
 			<div>
 				Sorting
-				<SelectComponent options={sortingOptions} onChange={setInitialOrder} />
+				<SelectComponent
+					value={initialOrder}
+					options={sortingOptions}
+					onChange={setInitialOrder}
+				/>
 			</div>
 			<div>
 				Filtering
 				<SelectComponent
+					value={filterCriteria}
 					options={filteringOptions}
 					onChange={setFilterCriteria}
 				/>

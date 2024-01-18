@@ -30,5 +30,5 @@ export const useSortingAccounts = () => {
 		}
 	}, [initialOrder]);
 
-	return { sortedAccounts, setInitialOrder };
+	return { sortedAccounts, setInitialOrder, initialOrder };
 };

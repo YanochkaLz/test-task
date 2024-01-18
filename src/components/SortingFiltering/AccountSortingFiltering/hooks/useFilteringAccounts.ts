@@ -28,5 +28,5 @@ export const useFilteringAccounts = () => {
 		}
 	}, [filterCriteria]);
 
-	return { filteredAccounts, setFilterCriteria };
+	return { filteredAccounts, setFilterCriteria, filterCriteria };
 };
