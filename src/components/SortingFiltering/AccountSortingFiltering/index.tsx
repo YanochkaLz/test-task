@@ -8,7 +8,7 @@ export const sortingOptions = [
 	'creation date decreasing',
 	'creation date ascending',
 ];
-export const filteringOptions = ['created in 2023', 'created in 2022 or later'];
+export const filteringOptions = ['created in 2023', 'created in 2022 or earlier'];
 
 interface IAccountSortingProps {
 	setAccounts: (accounts: IAccount[]) => void;

@@ -10,8 +10,8 @@ interface IProfileSortingProps {
 }
 
 export const sortingOptions = [
-	'country alphabetical decreasing',
-	'country alphabetical ascending',
+	'countries in alphabetical order',
+	'countries in non-alphabetical order',
 ];
 export const filteringOptions = ['Amazon', 'Not Amazon'];
 
